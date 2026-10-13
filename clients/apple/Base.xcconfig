@@ -1,3 +1,7 @@
 // Base build configuration — committed to git.
+
+// ghostty-vt.xcframework ships only an arm64 iOS Simulator slice.
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = x86_64
+
 // Pull in local overrides if present (optional include — no error if missing).
 #include? "Local.xcconfig"
